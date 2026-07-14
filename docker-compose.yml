@@ -1,0 +1,66 @@
+version: '3.8'
+
+services:
+  zookeeper:
+    image: bitnami/zookeeper:latest
+    container_name: zookeeper
+    environment:
+      - ALLOW_ANONYMOUS_LOGIN=yes
+    ports:
+      - "2181:2181"
+    networks:
+      - url-shortener-network
+
+  redis:
+    image: redis:latest
+    container_name: redis-cache
+    command: redis-server --maxmemory-policy volatile-lru
+    ports:
+      - "6379:6379"
+    networks:
+      - url-shortener-network
+
+  scylla:
+    image: scylladb/scylla:latest
+    container_name: scylladb
+    command: --smp 1 --memory 1024M --developer-mode 1
+    ports:
+      - "9042:9042"
+    networks:
+      - url-shortener-network
+
+  redpanda:
+    image: docker.redpanda.com/redpandadata/redpanda:latest
+    container_name: redpanda-broker
+    command:
+      - redpanda
+      - start
+      - --smp 1
+      - --memory 1G
+      - --reserve-memory 0M
+      - --overprovisioned
+      - --node-id 0
+      - --kafka-addr internal://0.0.0.0:9092,external://0.0.0.0:19092
+      - --advertise-kafka-addr internal://redpanda:9092,external://localhost:19092
+    ports:
+      - "19092:19092"
+      - "9644:9644"
+    networks:
+      - url-shortener-network
+
+  clickhouse:
+    image: clickhouse/clickhouse-server:latest
+    container_name: clickhouse-db
+    environment:
+      - CLICKHOUSE_USER=default
+      - CLICKHOUSE_PASSWORD=
+      - CLICKHOUSE_DB=url_shortener
+    ports:
+      - "8123:8123"
+      - "9000:9000"
+    networks:
+      - url-shortener-network
+
+networks:
+  url-shortener-network:
+    driver: bridge

@@ -1,0 +1,11 @@
+# Global AI Rules for this Workspace
+
+Before generating any code, answering questions, or making architectural decisions, you MUST read the blueprint files in the `.ai/` directory.
+
+- `.ai/status.md`: Tracks the current state of development, phases completed, and requirement changes.
+- `.ai/system-architecture.md`: Defines the microservices and their boundaries.
+- `.ai/tech-stack.md`: Defines allowed languages (Go) and environment variables.
+- `.ai/schemas.md`: Defines database DDLs, schemas, and API contracts.
+- `.ai/common-rules.md`: Defines workflow, scaffolding, and quality requirements.
+
+You must follow these constraints strictly. Do not hallucinate different stack choices or architecture designs.
