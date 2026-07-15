@@ -8,5 +8,6 @@ Specifically, you must always consult:
 3. `.ai/tech-stack.md`: For allowed languages, versions, and environment variables.
 4. `.ai/schemas.md`: For database structures (ScyllaDB, ClickHouse, Redis) and API contracts.
 5. `.ai/common-rules.md`: For strict development workflows, monorepo scaffolding, and code quality standards.
+6. `.ai/implementation_plan.md`: For the precise step-by-step task checklist that MUST be followed sequentially during development.
 
 Never deviate from these constraints without explicit user approval.

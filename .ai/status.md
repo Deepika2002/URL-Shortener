@@ -6,6 +6,8 @@ This document tracks the current implementation status of the URL Shortener proj
 - [x] **Phase 1-4:** Architectural Blueprints, Tech Stack Lock, Schema Definitions, and Agent Configurations. (Stored in `.ai/`)
 
 ## 🟡 In Progress: Phase 5 (Microservices Implementation)
+*Note: Phase 5 execution is strictly guided by the granular step-by-step checklist in `.ai/implementation_plan.md`.*
+
 - [ ] **Infrastructure & Scaffolding:** `docker-compose.yml`, DB initialization scripts (`deploy/init.cql`, `deploy/init.sql`).
 - [ ] **Key Generation Service (KGS):** Stateless Snowflake ID generation in Go.
 - [ ] **Write Service:** `POST /shorten`, idempotency, Bloom filter, database persistence.
