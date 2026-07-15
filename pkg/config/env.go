@@ -45,7 +45,7 @@ func LoadConfig() *Config {
 		ScyllaKeyspace:   getEnv("SCYLLA_KEYSPACE", "url_shortener"),
 		RedisAddr:        getEnv("REDIS_ADDR", "127.0.0.1:6379"),
 		KafkaBrokers:     getEnv("KAFKA_BROKERS", "127.0.0.1:19092"),
-		ClickHouseAddr:   getEnv("CLICKHOUSE_ADDR", "127.0.0.1:9000"),
+		ClickHouseAddr:   getEnv("CLICKHOUSE_ADDR", "127.0.0.1:19000"),
 		ZooKeeperServers: getEnv("ZOOKEEPER_SERVERS", "127.0.0.1:2181"),
 		ReadServicePort:  getEnv("READ_SERVICE_PORT", "8081"),
 		WriteServicePort: getEnv("WRITE_SERVICE_PORT", "8082"),

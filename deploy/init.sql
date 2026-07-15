@@ -1,10 +1,7 @@
-CREATE TABLE IF NOT EXISTS clicks_raw (
-    click_id UUID,
-    short_code String,
-    timestamp DateTime,
-    ip_address String,
-    user_agent String,
-    referer String,
-    country_code FixedString(2)
-) ENGINE = ReplacingMergeTree(timestamp)
-ORDER BY (short_code, timestamp);
+CREATE TABLE IF NOT EXISTS analytics_events (
+    short_id String,
+    long_url String,
+    event_type String,
+    timestamp DateTime
+) ENGINE = MergeTree()
+ORDER BY (short_id, timestamp);

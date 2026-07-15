@@ -67,17 +67,17 @@ This plan details the step-by-step implementation for Phase 5 of the URL Shorten
 - [x] **Step 52:** Implement HTTP handler for `GET /{short_code}` in `/internal/read/handler.go` (including 302/301 logic).
 - [x] **Step 53:** Create Read Service entrypoint in `/cmd/read-service/main.go`.
 - [x] **Step 54:** **AI Verification**: Run `go test ./internal/read/...`, `go build ./cmd/read-service`, and `go vet ./...`.
-- [ ] **Step 55:** **WAIT FOR USER**: Run Read Service locally. Access the short URL via browser/cURL. Verify redirection and Redis TTL refresh. Wait for user "go ahead".
-- [ ] **Step 56:** **[USER ACTION] Git Commit**: "feat: implement Read Service with dynamic caching and stampede prevention"
+- [x] **Step 55:** **WAIT FOR USER**: Run Read Service locally. Access the short URL via browser/cURL. Verify redirection and Redis TTL refresh. Wait for user "go ahead".
+- [x] **Step 56:** **[USER ACTION] Git Commit**: "feat: implement Read Service with dynamic caching and stampede prevention"
 
 ### Phase 5.6: Analytics Workers
-- [ ] **Step 57:** Write unit tests for Redpanda consumer logic in `/internal/analytics/consumer_test.go`.
-- [ ] **Step 58:** Implement Redpanda consumer worker in `/internal/analytics/consumer.go`.
-- [ ] **Step 59:** Write unit tests for ClickHouse bulk insertion logic in `/internal/analytics/clickhouse_test.go`.
-- [ ] **Step 60:** Implement ClickHouse bulk inserter in `/internal/analytics/clickhouse.go`.
-- [ ] **Step 61:** Create Analytics Worker entrypoint in `/cmd/analytics-worker/main.go`.
-- [ ] **Step 62:** **AI Verification**: Run `go test ./internal/analytics/...`, `go build ./cmd/analytics-worker`, and `go vet ./...`.
-- [ ] **Step 63:** **WAIT FOR USER**: Run the Analytics Worker locally. Click short links, verify deduplicated bulk inserts in ClickHouse. Wait for user "go ahead".
+- [x] **Step 57:** Write unit tests for Redpanda consumer logic in `/internal/analytics/consumer_test.go`.
+- [x] **Step 58:** Implement Redpanda consumer worker in `/internal/analytics/consumer.go`.
+- [x] **Step 59:** Write unit tests for ClickHouse bulk insertion logic in `/internal/analytics/clickhouse_test.go`.
+- [x] **Step 60:** Implement ClickHouse bulk inserter in `/internal/analytics/clickhouse.go`.
+- [x] **Step 61:** Create Analytics Worker entrypoint in `/cmd/analytics-worker/main.go`.
+- [x] **Step 62:** **AI Verification**: Run `go test ./internal/analytics/...`, `go build ./cmd/analytics-worker`, and `go vet ./...`.
+- [x] **Step 63:** **WAIT FOR USER**: Run the Analytics Worker locally. Click short links, verify deduplicated bulk inserts in ClickHouse. Wait for user "go ahead".
 - [ ] **Step 64:** **[USER ACTION] Git Commit**: "feat: implement Analytics Workers for Redpanda consumption and ClickHouse insertion"
 
 ## Verification Plan

@@ -45,7 +45,11 @@ services:
     container_name: urlshortener-clickhouse
     ports:
       - "8123:8123"
-      - "9000:9000"
+      - "19000:9000"
+    environment:
+      - CLICKHOUSE_PASSWORD=password
+    volumes:
+      - ./deploy/init.sql:/docker-entrypoint-initdb.d/init.sql
     ulimits:
       nofile:
         soft: 262144
