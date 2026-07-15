@@ -13,18 +13,18 @@ This plan details the step-by-step implementation for Phase 5 of the URL Shorten
 - [x] **Step 6:** **AI Verification**: Run `docker-compose config` and `go mod tidy` to validate configs.
 - [x] **Step 7:** **WAIT FOR USER**: Run `docker-compose up -d` and wait for containers to be fully healthy. Wait for user "go ahead".
 - [x] **Step 8:** **AI Verification**: Execute DB schemas using `docker exec -i urlshortener-scylla cqlsh < deploy/init.cql` and `docker exec -i urlshortener-clickhouse clickhouse-client < deploy/init.sql`.
-- [ ] **Step 9:** **[USER ACTION] Git Commit**: "chore: initialize go module, monorepo structure, and docker-compose infrastructure"
+- [x] **Step 9:** **[USER ACTION] Git Commit**: "chore: initialize go module, monorepo structure, and docker-compose infrastructure"
 
 ### Phase 5.2: Shared Packages (`/pkg`)
-- [ ] **Step 10:** Implement Environment Config parser in `/pkg/config/env.go` to load DB/Cache hosts and ports.
-- [ ] **Step 11:** Write unit tests for ScyllaDB connection wrapper.
-- [ ] **Step 12:** Implement ScyllaDB driver setup in `/pkg/db/scylla.go`.
-- [ ] **Step 13:** Write unit tests for Redis connection wrapper.
-- [ ] **Step 14:** Implement Redis client setup in `/pkg/cache/redis.go`.
-- [ ] **Step 15:** Write unit tests for Redpanda publisher wrapper.
-- [ ] **Step 16:** Implement Redpanda publisher in `/pkg/kafka/publisher.go`.
-- [ ] **Step 17:** Implement KGS HTTP client in `/pkg/kgsclient/client.go` to fetch Snowflake IDs.
-- [ ] **Step 18:** **AI Verification**: Run `go test ./pkg/...` and `go vet ./pkg/...`.
+- [x] **Step 10:** Implement Environment Config parser in `/pkg/config/env.go` to load DB/Cache hosts and ports.
+- [x] **Step 11:** Write unit tests for ScyllaDB connection wrapper.
+- [x] **Step 12:** Implement ScyllaDB driver setup in `/pkg/db/scylla.go`.
+- [x] **Step 13:** Write unit tests for Redis connection wrapper.
+- [x] **Step 14:** Implement Redis client setup in `/pkg/cache/redis.go`.
+- [x] **Step 15:** Write unit tests for Redpanda publisher wrapper.
+- [x] **Step 16:** Implement Redpanda publisher in `/pkg/kafka/publisher.go`.
+- [x] **Step 17:** Implement KGS HTTP client in `/pkg/kgsclient/client.go` to fetch Snowflake IDs.
+- [x] **Step 18:** **AI Verification**: Run `go test ./pkg/...` and `go vet ./pkg/...`.
 - [ ] **Step 19:** **[USER ACTION] Git Commit**: "feat: implement shared config, db, cache, kafka, and KGS client packages"
 
 ### Phase 5.3: Key Generation Service (KGS)
