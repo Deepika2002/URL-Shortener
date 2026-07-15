@@ -52,21 +52,21 @@ This plan details the step-by-step implementation for Phase 5 of the URL Shorten
 - [x] **Step 39:** Implement HTTP handler for `POST /shorten` in `/internal/write/handler.go`.
 - [x] **Step 40:** Create Write Service entrypoint in `/cmd/write-service/main.go`.
 - [x] **Step 41:** **AI Verification**: Run `go test ./internal/write/...`, `go build ./cmd/write-service`, and `go vet ./...`.
-- [ ] **Step 42:** **WAIT FOR USER**: Run Write Service locally. Send a `POST /shorten` request via cURL/Postman. Verify DB/Cache entries. Wait for user "go ahead".
-- [ ] **Step 43:** **[USER ACTION] Git Commit**: "feat: implement Write Service with idempotency, Bloom filter, and ScyllaDB persistence"
+- [x] **Step 42:** **WAIT FOR USER**: Run Write Service locally. Send a `POST /shorten` request via cURL/Postman. Verify DB/Cache entries. Wait for user "go ahead".
+- [x] **Step 43:** **[USER ACTION] Git Commit**: "feat: implement Write Service with idempotency, Bloom filter, and ScyllaDB persistence"
 
 ### Phase 5.5: Read Service (Redirection)
-- [ ] **Step 44:** Write unit tests for Redis cache read and TTL refresh in `/internal/read/cache_test.go`.
-- [ ] **Step 45:** Implement Redis cache read and TTL refresh in `/internal/read/cache.go`.
-- [ ] **Step 46:** Write unit tests for Mutex lock cache stampede prevention in `/internal/read/mutex_test.go`.
-- [ ] **Step 47:** Implement Mutex lock logic in `/internal/read/mutex.go`.
-- [ ] **Step 48:** Write unit tests for ScyllaDB repository (get mapping) in `/internal/read/repository_test.go`.
-- [ ] **Step 49:** Implement ScyllaDB repository in `/internal/read/repository.go`.
-- [ ] **Step 50:** Write unit tests for core redirection logic in `/internal/read/service_test.go`.
-- [ ] **Step 51:** Implement core redirection service logic (Cache Hit vs Miss) in `/internal/read/service.go`.
-- [ ] **Step 52:** Implement HTTP handler for `GET /{short_code}` in `/internal/read/handler.go` (including 302/301 logic).
-- [ ] **Step 53:** Create Read Service entrypoint in `/cmd/read-service/main.go`.
-- [ ] **Step 54:** **AI Verification**: Run `go test ./internal/read/...`, `go build ./cmd/read-service`, and `go vet ./...`.
+- [x] **Step 44:** Write unit tests for Redis cache read and TTL refresh in `/internal/read/cache_test.go`.
+- [x] **Step 45:** Implement Redis cache read and TTL refresh in `/internal/read/cache.go`.
+- [x] **Step 46:** Write unit tests for Mutex lock cache stampede prevention in `/internal/read/mutex_test.go`.
+- [x] **Step 47:** Implement Mutex lock logic in `/internal/read/mutex.go`.
+- [x] **Step 48:** Write unit tests for ScyllaDB repository (get mapping) in `/internal/read/repository_test.go`.
+- [x] **Step 49:** Implement ScyllaDB repository in `/internal/read/repository.go`.
+- [x] **Step 50:** Write unit tests for core redirection logic in `/internal/read/service_test.go`.
+- [x] **Step 51:** Implement core redirection service logic (Cache Hit vs Miss) in `/internal/read/service.go`.
+- [x] **Step 52:** Implement HTTP handler for `GET /{short_code}` in `/internal/read/handler.go` (including 302/301 logic).
+- [x] **Step 53:** Create Read Service entrypoint in `/cmd/read-service/main.go`.
+- [x] **Step 54:** **AI Verification**: Run `go test ./internal/read/...`, `go build ./cmd/read-service`, and `go vet ./...`.
 - [ ] **Step 55:** **WAIT FOR USER**: Run Read Service locally. Access the short URL via browser/cURL. Verify redirection and Redis TTL refresh. Wait for user "go ahead".
 - [ ] **Step 56:** **[USER ACTION] Git Commit**: "feat: implement Read Service with dynamic caching and stampede prevention"
 
