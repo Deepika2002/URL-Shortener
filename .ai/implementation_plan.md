@@ -37,21 +37,21 @@ This plan details the step-by-step implementation for Phase 5 of the URL Shorten
 - [x] **Step 26:** Implement KGS HTTP handler and router in `/internal/kgs/handler.go`.
 - [x] **Step 27:** Create KGS entrypoint in `/cmd/kgs/main.go` wiring up config, zk, and HTTP server.
 - [x] **Step 28:** **AI Verification**: Run `go test ./internal/kgs/...`, `go build ./cmd/kgs`, and `go vet ./...`.
-- [ ] **Step 29:** **WAIT FOR USER**: Run the KGS locally (`go run ./cmd/kgs/main.go`). Test via `curl http://localhost:8083/`. Wait for user "go ahead".
-- [ ] **Step 30:** **[USER ACTION] Git Commit**: "feat: implement Key Generation Service (KGS) with ZooKeeper worker ID assignment"
+- [x] **Step 29:** **WAIT FOR USER**: Run the KGS locally (`go run ./cmd/kgs/main.go`). Test via `curl http://localhost:8083/`. Wait for user "go ahead".
+- [x] **Step 30:** **[USER ACTION] Git Commit**: "feat: implement Key Generation Service (KGS) with ZooKeeper worker ID assignment"
 
 ### Phase 5.4: Write Service (Shortening)
-- [ ] **Step 31:** Write unit tests for Bloom Filter logic in `/internal/write/bloom_test.go`.
-- [ ] **Step 32:** Implement RedisBloom check and add logic in `/internal/write/bloom.go`.
-- [ ] **Step 33:** Write unit tests for idempotency caching in `/internal/write/idempotency_test.go`.
-- [ ] **Step 34:** Implement idempotency caching in `/internal/write/idempotency.go`.
-- [ ] **Step 35:** Write unit tests for ScyllaDB repository (store mapping) in `/internal/write/repository_test.go`.
-- [ ] **Step 36:** Implement ScyllaDB repository in `/internal/write/repository.go`.
-- [ ] **Step 37:** Write unit tests for core shortening service logic in `/internal/write/service_test.go`.
-- [ ] **Step 38:** Implement core shortening service logic (auto-gen vs custom alias) in `/internal/write/service.go`.
-- [ ] **Step 39:** Implement HTTP handler for `POST /shorten` in `/internal/write/handler.go`.
-- [ ] **Step 40:** Create Write Service entrypoint in `/cmd/write-service/main.go`.
-- [ ] **Step 41:** **AI Verification**: Run `go test ./internal/write/...`, `go build ./cmd/write-service`, and `go vet ./...`.
+- [x] **Step 31:** Write unit tests for Bloom Filter logic in `/internal/write/bloom_test.go`.
+- [x] **Step 32:** Implement RedisBloom check and add logic in `/internal/write/bloom.go`.
+- [x] **Step 33:** Write unit tests for idempotency caching in `/internal/write/idempotency_test.go`.
+- [x] **Step 34:** Implement idempotency caching in `/internal/write/idempotency.go`.
+- [x] **Step 35:** Write unit tests for ScyllaDB repository (store mapping) in `/internal/write/repository_test.go`.
+- [x] **Step 36:** Implement ScyllaDB repository in `/internal/write/repository.go`.
+- [x] **Step 37:** Write unit tests for core shortening service logic in `/internal/write/service_test.go`.
+- [x] **Step 38:** Implement core shortening service logic (auto-gen vs custom alias) in `/internal/write/service.go`.
+- [x] **Step 39:** Implement HTTP handler for `POST /shorten` in `/internal/write/handler.go`.
+- [x] **Step 40:** Create Write Service entrypoint in `/cmd/write-service/main.go`.
+- [x] **Step 41:** **AI Verification**: Run `go test ./internal/write/...`, `go build ./cmd/write-service`, and `go vet ./...`.
 - [ ] **Step 42:** **WAIT FOR USER**: Run Write Service locally. Send a `POST /shorten` request via cURL/Postman. Verify DB/Cache entries. Wait for user "go ahead".
 - [ ] **Step 43:** **[USER ACTION] Git Commit**: "feat: implement Write Service with idempotency, Bloom filter, and ScyllaDB persistence"
 
