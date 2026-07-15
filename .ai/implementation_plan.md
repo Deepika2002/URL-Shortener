@@ -25,18 +25,18 @@ This plan details the step-by-step implementation for Phase 5 of the URL Shorten
 - [x] **Step 16:** Implement Redpanda publisher in `/pkg/kafka/publisher.go`.
 - [x] **Step 17:** Implement KGS HTTP client in `/pkg/kgsclient/client.go` to fetch Snowflake IDs.
 - [x] **Step 18:** **AI Verification**: Run `go test ./pkg/...` and `go vet ./pkg/...`.
-- [ ] **Step 19:** **[USER ACTION] Git Commit**: "feat: implement shared config, db, cache, kafka, and KGS client packages"
+- [x] **Step 19:** **[USER ACTION] Git Commit**: "feat: implement shared config, db, cache, kafka, and KGS client packages"
 
 ### Phase 5.3: Key Generation Service (KGS)
-- [ ] **Step 20:** Write unit tests for Snowflake ID logic in `/internal/kgs/snowflake_test.go`.
-- [ ] **Step 21:** Implement Snowflake ID generation in `/internal/kgs/snowflake.go`.
-- [ ] **Step 22:** Write unit tests for Base62 encoding in `/internal/kgs/base62_test.go`.
-- [ ] **Step 23:** Implement Base62 encoding in `/internal/kgs/base62.go`.
-- [ ] **Step 24:** Write unit tests for ZooKeeper Worker ID fetcher in `/internal/kgs/zk_test.go`.
-- [ ] **Step 25:** Implement ZooKeeper Worker ID fetcher in `/internal/kgs/zk.go`.
-- [ ] **Step 26:** Implement KGS HTTP handler and router in `/internal/kgs/handler.go`.
-- [ ] **Step 27:** Create KGS entrypoint in `/cmd/kgs/main.go` wiring up config, zk, and HTTP server.
-- [ ] **Step 28:** **AI Verification**: Run `go test ./internal/kgs/...`, `go build ./cmd/kgs`, and `go vet ./...`.
+- [x] **Step 20:** Write unit tests for Snowflake ID logic in `/internal/kgs/snowflake_test.go`.
+- [x] **Step 21:** Implement Snowflake ID generation in `/internal/kgs/snowflake.go`.
+- [x] **Step 22:** Write unit tests for Base62 encoding in `/internal/kgs/base62_test.go`.
+- [x] **Step 23:** Implement Base62 encoding in `/internal/kgs/base62.go`.
+- [x] **Step 24:** Write unit tests for ZooKeeper Worker ID fetcher in `/internal/kgs/zk_test.go`.
+- [x] **Step 25:** Implement ZooKeeper Worker ID fetcher in `/internal/kgs/zk.go`.
+- [x] **Step 26:** Implement KGS HTTP handler and router in `/internal/kgs/handler.go`.
+- [x] **Step 27:** Create KGS entrypoint in `/cmd/kgs/main.go` wiring up config, zk, and HTTP server.
+- [x] **Step 28:** **AI Verification**: Run `go test ./internal/kgs/...`, `go build ./cmd/kgs`, and `go vet ./...`.
 - [ ] **Step 29:** **WAIT FOR USER**: Run the KGS locally (`go run ./cmd/kgs/main.go`). Test via `curl http://localhost:8083/`. Wait for user "go ahead".
 - [ ] **Step 30:** **[USER ACTION] Git Commit**: "feat: implement Key Generation Service (KGS) with ZooKeeper worker ID assignment"
 
