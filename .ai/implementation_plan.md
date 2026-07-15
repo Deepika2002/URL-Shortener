@@ -78,7 +78,7 @@ This plan details the step-by-step implementation for Phase 5 of the URL Shorten
 - [x] **Step 61:** Create Analytics Worker entrypoint in `/cmd/analytics-worker/main.go`.
 - [x] **Step 62:** **AI Verification**: Run `go test ./internal/analytics/...`, `go build ./cmd/analytics-worker`, and `go vet ./...`.
 - [x] **Step 63:** **WAIT FOR USER**: Run the Analytics Worker locally. Click short links, verify deduplicated bulk inserts in ClickHouse. Wait for user "go ahead".
-- [ ] **Step 64:** **[USER ACTION] Git Commit**: "feat: implement Analytics Workers for Redpanda consumption and ClickHouse insertion"
+- [x] **Step 64:** **[USER ACTION] Git Commit**: "feat: implement Analytics Workers for Redpanda consumption and ClickHouse insertion"
 
 ## Verification Plan
 
